@@ -1,0 +1,738 @@
+@charset "utf-8";
+body{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+h1{
+   margin: 0;
+   padding: 0; 
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* ヘッダー設定 */
+header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+.gnav{
+    display: flex;
+    justify-content: center;
+}
+.gnav li{
+    padding: 0 5%;
+    border-right: solid 1px;
+}
+.gnav li:first-child{
+    border-left: solid 1px;
+}
+.gnav li a{
+    color: #000;
+    text-decoration: none;
+
+}
+.gnav li a:hover{
+    text-decoration: underline;
+}
+nav{
+    flex: 1;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.logo{
+    margin: 0;
+    line-height: 0;
+    width: 150px;
+
+}
+/* キービジュアル設定 */
+.kvtext{
+    position: absolute;
+    top: 341px;
+    left: 201px;
+    text-align: right;
+    background-color: #FFAF48;
+    color: white;
+    box-shadow: 5px 5px;
+    font-size: 64px;
+    padding: 10px;
+}
+.kvtext span{
+    position: absolute;
+    bottom: 124px;
+    font-size: 20px;
+}
+
+.kvcontent{
+    position: relative;
+}
+.kvcontent ul{
+    position: absolute;
+    top: 480px;
+    left: 275px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+.kvcontent li::before{
+    content: url(../img/check.png);
+    width: 100%;
+    position: absolute;
+    right: 80px;
+}
+.kvcontent li{
+    background-color: white;
+    padding: 5px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.kvimg{
+    width: 100%;
+    padding: 0 0 200px 0;
+}
+/* コンテンツお悩み */
+#problem{
+    position: relative;
+}
+#problem h2{
+    text-align: center;
+    background-color: white;
+    font-size: 40px;
+    background-image: url(../img/box.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0 50px;
+}
+.worried{
+    position: absolute;
+    top: -70px;
+    right: 130px;
+}
+.worried_content{
+    display: flex;
+    justify-content: space-around;
+    background-color: #65D1C1;
+    padding: 200px 0 150px 0;
+}
+.worried_content li{
+    background-color: white;
+    width: 28%;
+    text-align: center;
+    padding: 75px 0;
+    border-radius: 20px;
+}
+#problem h3{
+    text-align: center;
+    font-size: 48px;
+   margin-bottom: 10px;
+}
+#problem span{
+    font-size: 96px;
+    border-bottom: solid 10px #FFAF48;
+
+}
+.graph{
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+.solution{
+    position: relative;
+}
+.deposit{
+    position: absolute;
+    width: 10%;
+    top: 10vw;
+    left: 20vw;
+}
+.time {
+    position: absolute;
+    width: 20%;
+    top: 13vw;
+    right: 20vw;
+}
+.early{
+    position: absolute;
+    bottom: 5vw;
+    left: 40vw;
+}
+/* ４つのポイント */
+#point ol{
+    list-style: none;
+}
+.point_title{
+    font-size: 40px;
+    text-align: center;
+}
+.point_title span{
+    font-size: 64px;
+    color: #FFAF48;
+}
+#point h3{
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+
+}
+#point h4{
+    font-size: 28px;
+}
+#point p{
+    font-size: 24px;
+}
+#point a{
+    font-size: 24px;
+    color: #fff;
+    background: #FFAF48;
+    padding: 25px 50px 25px 40px;
+    border-radius: 10px;
+}
+
+.point_contents{
+    background: #A8DED7;
+    width: 85%;
+    margin: 0 auto 30px;
+    padding: 50px 70px;
+}
+#point_contents h3{
+    
+}
+.flex_area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.img_area{
+    display: flex;
+}
+.point_flex{
+    flex-direction: row-reverse;
+}
+.right_ttl_2{
+    width: 330px;
+    margin-left: auto;
+}
+.right_ttl_4{
+    width: 415px;
+    margin-left: auto;
+}
+.infinity{
+    height: 100%;
+}
+/* カスタマイズ */
+#customize{
+    background: #65D1C1;
+    padding: 130px;
+}
+#customize h2{
+    font-size: 40px;
+    color: white;
+    background: #FFAF48;
+    box-shadow: 5px 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.custom_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowreverse{
+    flex-direction: row-reverse;
+}
+.arrow{
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    transform: rotate(-225deg);
+    padding: 60px 0;
+}
+/* 料金体系 */
+#rate_structure{
+    background: #A8DED7;
+}
+#rate_structure h2{
+    text-align: center;
+    font-size: 64px;
+    color: #fff;
+    border-bottom: 5px dashed #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}
+.txt_mini{
+    font-size: 36px;
+}
+.txt_color{
+    color: #FFAF48;
+}
+
+#rate_structure h3{
+    color: #fff;
+    text-align: center;
+    margin: 100px 0;
+    font-size: 40px;
+}
+.rate_structure_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.bg_wrap{
+    width: 340px;
+}
+.bg_wrap h4{
+    font-size: 32px;
+    color: #fff;
+    background: #65D1C1;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+}
+.bg_wrap p{
+    background: #fff;
+    border-radius: 0 0 20px 20px;
+    padding: 40px 0;
+    margin: 0;
+}
+.box1 span{
+    font-size: 48px;
+    color: #FFAF48;
+}
+.box2{
+    font-size: 24px;
+}
+.bg_wrap strong{
+    font-size: 16px;
+}
+.plus{
+    width: 50px;
+    height: 50px;
+}
+
+.plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.plan .plan_list{
+    padding: 60px 30px;
+    background: #fff;
+    margin-bottom: 190px;
+}
+.plan .plan_list h4{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+.plan .plan_list p{
+    text-align: center;
+    font-size: 14px;
+}
+.plan .plan_list .cost{
+    font-size: 32px;
+    border-bottom: 4px solid #6FBBDA;
+    padding-bottom: 20px;
+}
+.plan .plan_list ul{
+    list-style: disc;
+    padding-left: 20px;
+}
+.plan .plan_list ul li{
+    margin-top: 45px;
+}
+
+#application{
+    background-color: #6FBBDA;
+    padding: 25px 0;
+    width: 1100px;
+    margin: 80px auto 160px;
+}
+#application p{
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 32px;
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 20px 30px;
+}
+#application p span{
+    font-size: 40px;
+    color: #FFAF48;
+    font-weight: bold;
+}
+#application a{
+    background: #FFAF48;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 5px 5px #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 800px;
+}
+
+#application_flow h2{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background: #FFAF48;
+    box-shadow: 5px 5px #fff;
+    width: fit-content;
+    margin: 8%;
+}
+#application_flow ol{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+#application_flow p{
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    background: #FFAF48;
+    box-shadow: 5px 5px #fff;
+    text-align: center;
+    width: fit-content;
+    margin: 130px auto;
+}
+
+.inquiry{
+    color: #fff;
+    
+    width: 100%;
+    
+    
+}
+.bg_inquiry{
+    background: #FFAF48;
+    padding: 54px 18px;
+    border-radius: 80px;
+    
+    width: fit-content;
+    
+}
+
+footer{
+    background: #6FBBDA;
+    padding: 30px 0;
+}
+footer img{
+    margin-left: 150px;
+}
+footer .copy{
+    text-align: center;
+}
+
+
+
+
+form{
+  max-width: 414px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+dl{
+  display: flex;
+  flex-direction: column;
+}
+dt{
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+dd{
+  margin: 0 0 16px;
+}
+input{
+  width: 100%;
+  height: 32px;
+}
+select{
+  height: 32px;
+}
+textarea{
+  width: 100%;
+  resize: vertical;
+}
+
+.required{
+  font-size: .8rem;
+  color: red;
+  border: 1px solid red;
+  border-radius: 2px;
+  margin-left: 12px;
+  font-weight: normal;
+  padding: 0 4px;
+}
+
+.btn{
+  text-align: center;
+}
+form{
+    margin-top: 150px;
+}
+@media screen and (max-width: 767px) {
+    .logo img{
+        width: 15vw;
+    }
+    .gnav{
+        flex-direction: column;
+        gap: 10px;
+        width: 172px
+    }
+    .gnav li{
+        border: none;
+    }
+    .gnav li:first-child{
+        border: none;
+    }
+    .kvimg{
+        height: 126vw;
+        object-fit: cover;
+    }
+    .kvtext{
+        font-size: 24px;
+        left: 15px;
+        top: 36vw;
+    }
+    .kvtext span{
+        font-size: 16px;
+        color: black;
+        bottom: 75px;
+    }
+    .kvcontent ul{
+        left: 10%;
+        top: 302px;
+    }
+    .kvcontent li::before{
+        right: 73px;
+    }
+    .worried{
+    top: -5px;
+    right: -2px;
+    width: 19vw;
+    }
+    .early {
+        position: absolute;
+        bottom: 5vw;
+        left: 32vw;
+        width: 35%;
+    }
+    .worried_content{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      
+    }
+    .worried_content li{
+        margin: 0 auto;
+        padding: 50px 0;
+        width: 60%;
+    }
+    #problem h2{
+        font-size: 20px;
+    }
+    #problem h3{
+        font-size: 20px;
+    }
+    #problem span{
+        font-size: 24px;
+        border-bottom: 3px solid #FFAF48 ;
+    }
+    .point_title{
+        font-size: 24px;
+    }
+    .point_title span{
+        font-size: 32px;
+    }
+    #point h3{
+        font-size: 20px;
+    }
+    #point h4{
+        font-size: 16px;
+    }
+    #point p{
+        font-size: 14px;
+    }
+    #point a{
+        font-size: 14px;
+        padding: 17px ;
+        white-space: nowrap;
+    }
+    .img_area{
+        align-items: center;
+    }
+    .img_area img{
+        max-width: none;
+        width: 20vw;
+    }
+    .point_contents{
+        width: 100%;
+        padding: 50px 15px;
+    }
+    .right_ttl_2{
+        width: 235px;
+    }
+    .right_ttl_4{
+        width: 240px;
+    }
+    #customize{
+        padding: 130px 15px;
+    }
+    #customize .custom_flex img{
+        width: 40%;
+    }
+    #customize h2{
+        font-size: 20px;
+    }
+    .txt_mini{
+        font-size: 16px;
+    }
+    #rate_structure h2{
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    #rate_structure h3{
+        font-size: 16px;
+    }
+    #rate_structure h4{
+        font-size: 16px;
+    }
+    .box1 span{
+        font-size: 20px;
+    }
+    .box2{
+        font-size: 13px;
+    }
+    .bg_wrap strong{
+        font-size: 10px;
+    }
+    .plan{
+        flex-direction: column;
+    }
+    #application p{
+        font-size: 10px;
+    }
+    #application p span{
+        font-size: 10px;
+    }
+    #application a{
+        font-size: 14px;
+        width: 100%;
+    }
+    #application{
+        width: 100%;
+    }
+    #application_flow h2{
+        margin: 0;
+        font-size: 20px;
+    }
+    #application_flow p{
+        font-size: 20px;
+    }
+    .menu-btn{
+        align-items: center;
+        background: #ccc;
+        color: #FFF;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 40px;
+        z-index: 2;
+    }
+    .menu-btn span, .menu-btn span:before, .menu-btn span:after {
+        background-color: #FFF;
+        border-radius: 3px;
+        content: "";
+        display: block;
+        height: 3px;
+        position: absolute;
+        width: 25px;
+        transition: all .2s ease-out;
+    }
+    
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    
+    .menu-btn span:after {
+        top: 8px;
+    }
+    
+    .is-active .menu-btn span{
+        transform: rotate(45deg);
+    }
+    .is-active .menu-btn span::before{
+        display: none;
+    }
+    .is-active .menu-btn span::after{
+        transform: rotate(90deg) translateX(-30%);
+    }
+    
+    .menu {
+        align-items: center;
+        background: #65D1C1;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        z-index: 1;
+    }
+    
+    .menu-item {
+        box-sizing: border-box;
+        color: #FFF;
+        height: auto;
+        padding: .5em 1em;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .menu {
+        transform: translateX(100vw);
+        transition: all .3s linear;
+    }
+    
+    .menu.is-active {
+        transform: translateX(0);
+    }
+} 
